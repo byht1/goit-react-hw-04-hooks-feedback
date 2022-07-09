@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from './Feedback.module.css';
+import { DivBox } from './Statistics.styled';
 
 export default function Statistics({
   good,
@@ -9,13 +9,13 @@ export default function Statistics({
   positivePercentage,
 }) {
   return (
-    <div className={s.box}>
+    <DivBox>
       <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
       <p>Total: {total}</p>
       <p>Positive feedback: {positivePercentage} %</p>
-    </div>
+    </DivBox>
   );
 }
 

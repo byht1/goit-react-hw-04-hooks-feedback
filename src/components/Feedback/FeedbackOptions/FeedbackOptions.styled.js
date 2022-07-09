@@ -1,15 +1,26 @@
-.boxButton {
+import styled from '@emotion/styled';
+
+export const List = styled.ul`
   width: 100%;
   margin-top: 20px;
   display: flex;
   gap: 20px;
-}
+`;
 
-.elements {
+export const Elements = styled.li`
   flex-basis: calc(100% / 3);
-}
+  color: red;
 
-.button {
+  &:first-of-type {
+    color: green;
+  }
+
+  &:nth-of-type(2) {
+    color: blue;
+  }
+`;
+
+export const Button = styled.button`
   background: rgba(0, 0, 0, 0);
   border-bottom: 1px solid;
   color: white;
@@ -34,35 +45,15 @@
   outline-offset: 0px;
   text-shadow: none;
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-}
 
-.button:hover {
-  position: absolute;
-  color: red;
+  &:hover {
+    position: absolute;
+    color: inherit;
 
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-  /* text-shadow: 1px 1px 2px #427388; */
-}
-
-.elements:first-child .button:hover {
-  color: green;
-}
-.elements:nth-child(2) .button:hover {
-  color: blue;
-}
-
-.section {
-  font-size: 20px;
-}
-
-.title {
-  font-size: 40px;
-}
-
-.box {
-  margin-top: 20px;
-}
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+`;

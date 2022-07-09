@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import s from './Feedback.module.css';
+import { Div, Title } from './Section.styled';
 
 export default function Section({ title, children }) {
   return (
-    <div className={s.section}>
-      <h2 className={s.title}>{title}</h2>
+    <Div>
+      <Title>{title}</Title>
       {children}
-    </div>
+    </Div>
   );
 }
 
